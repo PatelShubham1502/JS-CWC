@@ -45,7 +45,7 @@ const obj3 = { ...obj1, ...obj2 }; //best way spread
 // console.log(Object.keys(obj2)); // returns the key
 // console.log(Object.values(obj2)); // returns the value
 // console.log(Object.entries(obj2)); // returns the entries
-console.log(obj3.hasOwnProperty("3")); //checks wether the property is there in the object or not
+// console.log(obj3.hasOwnProperty("3")); //checks wether the property is there in the object or not
 
 const users = [
   {
@@ -64,5 +64,38 @@ const users = [
   },
 ];
 
-console.log(users[1]);
-console.log(users[2]);
+// console.log(users[1]);
+// console.log(users[2]);
+
+// --------- De-structure and json api -------------------------------
+
+const course = {
+  courseName: "Javascript",
+  coursePrice: "999",
+  courseInstructor: "Hitesh Bhai",
+};
+
+// console.log(course.courseInstructor);  //normal way
+
+// .......... Here course is the objectname, inside{} is the property name, now you directly write the property name to use it
+const { courseInstructor } = course;
+// console.log(courseInstructor);
+
+// -------  Same as above code but the only diff is teacher is the new name of the courseInstructor, now directly write teacher to access it
+const { courseInstructor: teacher } = course;
+// console.log(teacher);
+
+const { coursePrice: mrp } = course;
+// console.log(mrp);
+
+// ------- API's -----------------------------
+// jason can be in aform of object or an array
+// {
+//   "name": "abc",
+//   "age": 25,
+// }
+
+// [
+//   {},
+//   {},
+// ]
